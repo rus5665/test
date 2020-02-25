@@ -1,21 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
+import 'react-native-gesture-handler'
 import React from 'react'
-
-
-import MainScreen from '../src/screens/MainScreen'
+import { Provider } from 'react-redux'
+import MainNavigation from './navigation/MainNavigation'
+import { store } from './store/configureStore'
 
 const App = () => {
   return (
-    <>
-      <MainScreen />
-    </>
+    <Provider store={store}>
+      <MainNavigation />
+    </Provider>
   )
 }
 
